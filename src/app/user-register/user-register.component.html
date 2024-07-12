@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://i.postimg.cc/pTtLHjNy/Deal-PNG-Cutout.png" alt="no image">
+    </div>
+    <div class="text-center mt-4 name">
+        Register
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="register()" class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" name="username" id="userName" formControlName="username" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="email" name="email" id="email" formControlName="email" placeholder="Email">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <!-- <i class="fas fa-key"></i> -->
+            <input type="password" name="password" id="pwd" formControlName="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn mt-3">Register</button>
+    </form>
+    <div class="text-center fs-6">
+         <a routerLink="/login">Login</a><br>
+    </div>
+</div>

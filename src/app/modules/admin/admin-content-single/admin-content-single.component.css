@@ -1,0 +1,9 @@
+.feature{
+    flex-wrap: wrap;
+}
+.feature1{
+    margin-bottom: 10px;
+} 
+.edit{
+    cursor: pointer;
+}

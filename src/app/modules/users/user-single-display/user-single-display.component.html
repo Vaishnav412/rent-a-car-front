@@ -1,0 +1,104 @@
+
+<!-- Navigation-->
+<section>
+  <app-user-home></app-user-home>
+</section>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" [src]="singleDetails.photo" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="medium mb-1 fw-bolder">{{singleDetails.name}}</div>
+              
+                  <h1 class="display-5 fw-bolder">{{singleDetails.model}}</h1>    
+                  <h1 class="display-5 fw-bolder">Model Year :&nbsp; {{singleDetails.year}}</h1>    
+
+
+                <div class="fs-5 mb-3">
+                    <h2>{{singleDetails.price}}<span class="text-secondary">/day</span></h2>
+                </div>
+                <p class="lead">{{singleDetails.description}}</p>
+                <div class="feature d-flex">
+                    <div class="feature1 border rounded p-2 d-flex me-2"> <i class="fa-solid fa-gauge fa-lg me-2 pt-4" style="color: #63E6BE;"></i><h3 style="padding-top: 11px;">{{singleDetails.kilometer}}</h3></div>
+                    <div class="feature1  border rounded p-2 d-flex me-2 "> <i class="fa-brands fa-searchengin fa-lg me-2 pt-4" style="color: #63E6BE;"></i><h3 style="padding-top: 11px;">{{singleDetails.type}}</h3></div>
+                    <div class="feature1  border rounded p-2 d-flex me-2"> <i class="fa-solid fa-gas-pump fa-lg me-2 pt-4" style="color: #63E6BE;"></i><h3 style="padding-top: 11px;">{{singleDetails.transmission}}</h3></div>
+                    <div class="feature1  border rounded p-2 d-flex"> <i class="fa-solid fa-wheelchair fa-lg me-2 pt-4" style="color: #63E6BE;"></i><h3 class="me-2" style="padding-top: 11px;">   {{singleDetails.seat}} &nbsp; Seat</h3></div>
+
+                </div>
+                
+                  <div class="border rounded p-2 d-flex me-2" style="width: 105px;"><i class="fa-solid fa-palette fa-lg me-2 pt-4" style="color: #63E6BE; padding-left: 8px;"></i> <h3 style="padding-top: 11px;">{{singleDetails.color}}</h3></div>
+                
+                <!-- Car Book-->
+                <div class="card-footer p-4 pt-4 border-top-0 bg-transparent">
+                    <div class="text-center"><button type="button" class="btn btn-outline-info mt-auto " data-bs-toggle="modal" data-bs-target="#staticBackdrop"   routerLink="#">Book Now</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary fw-bolder" id="staticBackdropLabel">RENT CAR BOOKING</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- <div class="form-floating mb-3">
+                <input name="id"  type="text" class="form-control" id="floatingInputModel" formControlName="id" placeholder="Id"  >
+                <label for="floatingInputModel">Id</label>
+              </div> -->
+
+             <form [formGroup]="BookForm" (ngSubmit)="book()">
+                <div class="form-floating mb-3">
+                  <input name="Fname"  type="text" class="form-control" id="floatingInputFname" formControlName="name" placeholder="First Name"  >
+                  <label for="floatingInputFname"> Name</label>
+                </div>
+  
+               
+  
+                <div class="form-floating mb-3">
+                  <input name="mobile"  type="mobile" class="form-control" id="floatingInputMobile" formControlName="mobile" placeholder="Mobile Number"  >
+                  <label for="floatingInputMobile">Mobile Number</label>
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input name="age"  type="age" class="form-control" id="floatingInputAge" formControlName="age" placeholder="Age"  >
+                  <label for="floatingInputAge">Age</label>
+   
+                </div>
+  
+  
+  
+                <div class="form-floating mb-3 border p-2 rounded">
+                  <h3>Starting Date</h3>   
+                 <input formControlName="startingDate" class="me-3 text-decoration-none" type="date" >
+   
+                </div>
+                <div class="form-floating mb-3 border rounded p-2">
+                  <h3>Ending Date</h3>
+                  <input formControlName="endingDate" type="date">
+                </div>
+                <div class="form-floating mb-3">
+                  <select  name="proofID" formControlName="proofID" id="" class="form-control"  required>
+                       <option disabled selected hidden></option>
+                  <option value="DRIVING LICENCE">DRIVING LICENSE</option>
+                  <option value="AADHAR ">AADHAR</option>
+                  
+      
+                  </select>
+                  <label for="floatingInputStatus">Select a Proof</label>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Book Now</button>
+                </div>
+             </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>

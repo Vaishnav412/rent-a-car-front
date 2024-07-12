@@ -1,0 +1,188 @@
+<div class="user_details mt-5 shadow border rounded p-3 w-50 m-auto">
+
+    <form [formGroup]="AddForm" (ngSubmit)="add()">
+
+        <!-- id -->
+
+        <div class="form-floating mb-3">
+            <input name="id"  type="text" class="form-control" id="floatingInputModel" formControlName="id" placeholder="Id" pattern="[0-9]*" required >
+            <label for="floatingInputModel">Id</label>
+          </div>
+
+          <!-- error div for id -->
+
+          <div *ngIf="AddForm.get('id')?.errors&&AddForm.get('id')?.touched"  class="mb-3 text-danger">Invalid id</div>
+
+           <!-- model -->
+
+        <div class="form-floating mb-3">
+          <input name="model" type="text" class="form-control" formControlName="model" id="floatingInputModel" placeholder="model" pattern="[a-zA-Z0-9+. ]*" required >
+          <label for="floatingInputModel">Model</label>
+        </div>
+
+        <!-- error div for model -->
+
+        <div *ngIf="AddForm.get('model')?.errors&&AddForm.get('model')?.touched"  class="mb-3 text-danger">Invalid Model</div>
+
+
+          <!-- user name -->
+
+          <div class="form-floating mb-3">
+            <input type="text"  name="name" formControlName="name" class="form-control" id="floatingInputname" placeholder="Name" required pattern="[a-zA-Z ]*">
+            <label for="floatingInputName">Name</label>
+          </div>
+
+          <!-- error div for name -->
+
+          <div *ngIf="AddForm.get('name')?.errors&&AddForm.get('name')?.touched" class="mb-3 text-danger">Invalid Name</div>
+
+           <!-- photo -->
+
+           <div class="form-floating mb-3">
+            <input type="url"  name="photo" formControlName="photo" class="form-control" id="floatingInputphoto" placeholder="Photo" required>
+            <label for="floatingInputphoto">Photo</label>
+          </div>
+
+          <!-- error div for photo -->
+
+          <div *ngIf="AddForm.get('photo')?.errors&&AddForm.get('photo')?.touched" class="mb-3 text-danger">Invalid photo</div>
+
+
+          <!-- description -->
+
+          <div class="form-floating mb-3">
+            <textarea class="form-control" name="description" placeholder="Description" formControlName="description" id="exampleFormControlTextarea1" rows="10" required></textarea>
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+
+          </div>
+
+          <!-- error div for  description-->
+
+          <div *ngIf="AddForm.get('description')?.errors&&AddForm.get('description')?.touched" class="mb-3 text-danger">Invalid description</div>
+
+
+
+
+
+          <!-- Type -->
+
+          <div class="form-floating mb-3">
+            <select  name="type" id="" formControlName="type" class="form-control"  required>
+                 <option disabled selected hidden></option>
+            <option value="petrol">Petrol</option>
+            <option value="Diesal">Diesal</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Electric">Electric</option>
+            <option value="CNG">CNG</option>
+
+            </select>
+            <label for="floatingInputStatus">Select a Type</label>
+          </div>
+
+            <!-- error div for select-->
+
+            <div *ngIf="AddForm.get('type')?.errors&&AddForm.get('type')?.touched"  class="mb-3 text-danger">Invalid Type</div>
+
+
+
+
+                      <!-- transmission -->
+
+          <div class="form-floating mb-3">
+            <select  name="transmission" formControlName="transmission" id="" class="form-control"  required>
+                 <option disabled selected hidden></option>
+            <option value="AUTOMATIC">AUTOMATIC</option>
+            <option value="MANUAL">MANUAL</option>
+            
+
+            </select>
+            <label for="floatingInputStatus">Select a transmission</label>
+          </div>
+
+            <!-- error div for select-->
+
+            <div *ngIf="AddForm.get('transmission')?.errors&&AddForm.get('transmission')?.touched"  class="mb-3 text-danger">Invalid Transmission</div>
+
+
+            <!-- color -->
+            <div class="form-floating mb-3">
+              <select  name="color" id="" formControlName="color" class="form-control"  required>
+                   <option disabled selected hidden></option>
+              <option value="Red">Red</option>
+              <option value="Blue">Blue</option>
+              <option value="Black">Black</option>
+              <option value="Gray">Gray</option>
+              <option value="White">White</option>
+              <option value="Orange">Orange</option>
+              <option value="Silver">Silver</option>
+  
+              </select>
+              <label for="floatingInputStatus">Select a color</label>
+            </div>
+  
+              <!-- error div for select-->
+  
+              <div *ngIf="AddForm.get('color')?.errors&&AddForm.get('color')?.touched"  class="mb-3 text-danger">Invalid Color</div>
+
+
+            <!-- Year  -->
+
+          <div class="form-floating mb-3">
+            <input type="text"  name="text" formControlName="year" class="form-control" id="floatingInputYear" placeholder="Model year" pattern="[0-9]*" required >
+            <label for="floatingInputYear">Year</label>
+          </div>
+
+          <!-- error div for Year-->
+
+          <div *ngIf="AddForm.get('year')?.errors&&AddForm.get('year')?.touched" class="mb-3 text-danger">Invalid Year</div>
+           <!-- Seat  -->
+
+           <div class="form-floating mb-3">
+            <input type="text"  name="text" formControlName="seat" class="form-control" id="floatingInputSeat" placeholder="Seat" pattern="[0-9]*" required >
+            <label for="floatingInputSeat">Seat</label>
+          </div>
+
+          <!-- error div for Seat-->
+
+          <div *ngIf="AddForm.get('seat')?.errors&&AddForm.get('seat')?.touched" class="mb-3 text-danger">Invalid Seat</div>
+           <!-- Kilometer  -->
+
+           <div class="form-floating mb-3">
+            <input type="text"  name="text" formControlName="kilometer" class="form-control" id="floatingInputKmh" placeholder="Kilo meter" pattern="[0-9a-zA-Z]*" required >
+            <label for="floatingInputKmh">Kilometer</label>
+          </div>
+
+          <!-- error div for Kilometer-->
+
+          <div *ngIf="AddForm.get('kilometer')?.errors&&AddForm.get('kilometer')?.touched" class="mb-3 text-danger">Invalid Kilometer</div>
+
+
+
+
+
+          <!-- price -->
+
+          <div class="form-floating mb-3">
+            <input type="type"  name="price" formControlName="price" class="form-control" id="floatingInputPrice" placeholder="Price" pattern="[0-9]*" required >
+            <label for="floatingInputPrice">Price</label>
+          </div>
+
+          <!-- error div for Price-->
+
+          <div *ngIf="AddForm.get('price')?.errors&&AddForm.get('price')?.touched" class="mb-3 text-danger">Invalid Price</div>
+
+
+
+
+          <!-- button -->
+
+
+          <div class="form-floating mb-3 d-flex justify-content-center">
+            <button type="submit"  class="btn btn-success w-100">Post</button>
+          </div>
+
+
+    </form>
+
+
+</div>

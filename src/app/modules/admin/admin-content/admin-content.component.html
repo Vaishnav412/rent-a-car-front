@@ -1,0 +1,41 @@
+<section>
+    <app-navbar></app-navbar>
+</section>
+
+<section class="py-5 pt-5" style="margin-top: 2%;">
+    <div class=" px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <!-- Iterate over all details -->
+            <div *ngFor="let details of getAlldetails" class="col mb-5 py-3 py-md-0">
+                <div class="box card h-100 mb-3">
+                    <!-- Sale badge -->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Rent</div>
+
+                    <!-- Car image -->
+                    <img class="card-img-top mt-3" [src]="details.photo" alt="Car image" />
+
+                    <!-- Car details -->
+                    <div class="card-body p-2">
+                        <div class="text-center">
+                            <!-- Car name -->
+                            <h5 class="fw-bolder">{{details.name}}</h5>
+                            <!-- Car color -->
+                            <h5 class="fw-bolder">Color: {{details.color}}</h5>
+                            <!-- Car price -->
+                            <h5 class="fw-bolder">Price: {{details.price}}<span class="text-secondary">/day</span></h5>
+                        </div>
+                    </div>
+
+                    <!-- Car actions -->
+                    <div class="d-flex card-footer p-2 pt-0 border-top-0 bg-transparent pb-3">
+                        <div class="text-center w-100">
+                            <a class="btn btn-outline-info mt-auto me-2" [routerLink]="'admin-single-view/' + details.id">View More</a>
+                            <button (click)="deleteDet(details._id)" class="btn btn-outline-secondary p-3 fa-solid fa-trash-can fa-lg pt-3 mt-2"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of iteration -->
+        </div>
+    </div>
+</section>

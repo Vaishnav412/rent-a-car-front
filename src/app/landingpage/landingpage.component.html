@@ -1,0 +1,137 @@
+<!-- Navigation-->
+<nav class="navbar bg-body-secondary navbar-expand-lg fixed-top p-3" >
+   
+    <div class="container container-fluid">
+        <a style="padding-left: 80px;" class="navbar-brand fw-bolder" href="#">RENT A CAR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active p-2 me-2 rounded" aria-current="page" href="#features">View More</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 rounded me-2 " routerLink="login">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active border rounded p-2 text-white bg-primary" routerLink="user-register">Sign Up</a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    
+  </nav>
+<!-- Header-->
+<header class="masthead" style="padding-top: 100px;">
+    <div class=" px-5">
+        <div class="row gx-5 align-items-center">
+            <!-- Left column for text and app badges -->
+            <div class="col-lg-6 col-md-12">
+                <div class="mb-5 mb-lg-0 text-center text-lg-start p-5">
+                    <h1 style="font-size: 60px; " class="display-1 lh-1 mb-3">Find, book and <br> rent a car <span
+                            class="text-primary">easly</span></h1>
+                    <p class="lead fw-normal text-muted mb-5">Get a car wherever and whenever you <br> need it with your
+                        IOS and Android device.</p>
+                    <div class="d-flex flex-column flex-lg-row align-items-center">
+                        <img class="app-badge me-2" style="width: 100px;"
+                            src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg"
+                            alt="Google Play Badge" />
+                        <img class="app-badge " style="width: 100px;"
+                            src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg"
+                            alt="App Store Badge" />
+                    </div>
+                </div>
+            </div>
+            <!-- Right column for device mockup -->
+            <div class="col-lg-6 col-md-12">
+                <div class="masthead-device-mockup text-center  d-none d-xl-block ">
+                    <img class="img-fluid"
+                        src="https://i.postimg.cc/wTh0LzWC/bmw-reviews-and-rating-motor-trend-1.png"
+                        alt="Device Mockup">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section id="features" class="bg-light py-5 border-bottom">
+    <div class="container-fluid px-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Car Category</h2>
+            <p class="lead mb-0">Three category cars available</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <!-- Pricing card free-->
+            <div class="col-lg-6 col-xl-4 me-4 mb-4">
+                <div class="card mb-5 mb-xl-0">
+                    <div class="card-body p-5">
+                        <div class="mb-3">
+
+                            <img width="300px" class="img-fluid rounded "
+                                src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/149123/nexon-ev-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80&q=80"
+                                alt="Electric Cars">
+                            <h2 class="h4 fw-bolder">ELECTRIC CARS</h2>
+                            <p>An electric vehicle (EV) is one that operates on an electric motor, instead of an
+                                internal-combustion
+                                engine that generates power by burning a mix of fuel and gases.</p>
+
+                        </div>
+
+                        <div class="d-grid"><a class="btn btn-outline-primary p-2" routerLink="login">Check more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing card pro-->
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="card mb-5 mb-xl-0">
+                    <div class="card-body p-5">
+
+                        <div class="mb-3">
+                            <img width="300px" class="img-fluid rounded"
+                                src="https://acko-cms.ackoassets.com/Best_Manual_Cars_in_India_9ca3673d91.png"
+                                alt="Manual Cars">
+                            <h2 class="h4 fw-bolder">MANUAL CARS</h2>
+
+                            <p>Driving a manual transmission is a skill that needs to be learnt and practiced to
+                                understand how to get the most efficiency, power, and acceleration from the car.</p>
+                        </div>
+
+                        <div class="d-grid"><a class="btn btn-outline-primary p-2" routerLink="login">Check More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing card enterprise-->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <div class="mb-3">
+                            <img width="300px" class="img-fluid rounded"
+                                src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=http%3A%2F%2Fcdni.autocarindia.com%2FNews%2F20200615045915_Hyundai-Venue-DT.jpg&c=0"
+                                alt="Automatic Cars">
+                            <h2 class="h4 fw-bolder">AUTOMATIC CARS</h2>
+                            <p>An automatic transmission is a type of transmission which automatically shifts gear and
+                                therefore
+                                doesn’t require the driver to shift gears manually.</p>
+                        </div>
+
+                        <div class="d-grid"><a class="btn btn-outline-primary p-2" routerLink="login">Check More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer-->
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container-fluid text-center">
+        <small>Copyright &copy; Rent a Car</small>
+    </div>
+</footer>

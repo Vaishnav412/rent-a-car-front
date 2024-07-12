@@ -1,0 +1,43 @@
+
+<section>
+    <app-user-home></app-user-home>
+</section>
+<section class="py-5">
+    <div class=" px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let details of getdetails">
+                <div class="box card h-100 w-100">
+                    <!-- Sale badge -->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Rent</div>
+
+                    <!-- Car image -->
+                    <img class="card-img-top" style="height: 175px;" [src]="details.photo" alt="Car Image" />
+
+                    <!-- Car details -->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Car name -->
+                            <h4 class="fw-bolder">{{details.name}}</h4>
+                            <!-- Car color -->
+                            <h5 class="fw-bolder">Color: {{details.color}}</h5>
+                            <!-- Car price -->
+                            <h5 class="fw-bolder">Price: {{details.price}}<span class="text-secondary">/day</span></h5>
+                        </div>
+                    </div>
+
+                    <!-- Car actions -->
+                    <div class="d-flex card-footer p-2 mb-2 border-top-0 bg-transparent justify-content-center">
+                        <div class="text-center">
+                            <a class="btn btn-outline-info mt-auto me-3" [routerLink]="'user-single-view/' + details.id">View More</a>
+                        </div>
+                        <div class="text-center">
+                            <button (click)="addToWishlists( userData.email, details.id, details.model, details.name, details.photo, details.description, details.type, details.transmission, details.color, details.year, details.seat, details.kilometer, details.price )" class="btn btn-outline-danger mt-auto">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

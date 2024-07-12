@@ -1,0 +1,57 @@
+<section>
+    <app-user-home></app-user-home>
+</section>
+
+
+<section id="booking">
+    
+<!-- card -->
+<div class="container">
+    <div class="row" >
+        <div *ngFor="let getalls of getAllBook | userbooking:searchkey : 'usermail'" class="card mb-3" id="bookingcard" style="max-width: 100%;">
+            <div  class="row g-0">
+                <div class="col-md-4">
+                    <img [src]="getalls.carimage"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+
+                <div class="col-md-4">
+                   <div class="card-body pt-5">
+                        <p class="card-title fw-bolder">Name :&nbsp; {{getalls.carname}} </p>
+                        <p class="card-title fw-bolder">Model Name : {{getalls.carmodel}}</p>
+                        <p class="card-title fw-bolder">Color :  {{getalls.color}}</p>
+                        <p class="card-title fw-bolder">Transmission : {{getalls.transmission}}</p>
+                        <p class="card-title fw-bolder">Price : {{getalls.price}}<span style="color: gray;">/Day</span></p>
+                   </div>
+                </div>
+
+                
+
+                <div class="col-md-4">
+                    <div class="bookingsec card-body pt-5 rounded">
+                        <p class="card-title fw-bolder">Name : &nbsp;{{getalls.name}}</p>
+                        <p class="card-title fw-bolder">User Mail : &nbsp;{{getalls.usermail}}</p>
+
+                        <p class="card-title fw-bolder">Age : &nbsp;{{getalls.age}}</p>
+                        <p class="card-title fw-bolder">Mobile : &nbsp;{{getalls.mobile}}</p>
+
+                        <p class="card-title fw-bolder">ProofID : &nbsp;{{getalls.proofID}}</p>
+                        <div class="d-flex">
+                            <p class="card-text fw-bolder me-5">Starting Date : &nbsp; <br> {{getalls.startingDate}}</p>
+                            <p class="card-text fw-bolder">Ending Date : &nbsp; <br> {{getalls.endingDate}}</p>
+                        </div>
+
+
+                        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        <div class="d-flex card-footer p-2  border-top-0 bg-transparent justify-content-end">
+                            
+                            <div class="text-center "><button (click)="canbook(getalls._id)" class="btn btn-outline-danger mt-auto" routerLink="#">Cancel Booking</button></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

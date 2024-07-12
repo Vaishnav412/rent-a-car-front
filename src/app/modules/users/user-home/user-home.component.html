@@ -1,0 +1,23 @@
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-dark p-3  navbar-custom fixed-top" style="background: rgb(132,164,163);
+background: linear-gradient(109deg, rgba(132,164,163,1) 35%, rgba(32,166,213,1) 77%);">
+  <div class="container px-5">
+      <a class="navbar-brand text-light fw-bolder" routerLink="/users/{{userData._id}}">RENT A CAR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link  border rounded p-2 me-2 mb-2" style="width: 60px;" routerLink="/users/{{userData}}">Home</a></li>
+              <li class="nav-item"><a class="nav-link  border rounded p-2 me-2 mb-2" style="width: 70px;" routerLink="/users/{{userData}}/mybookings">Booking</a></li>
+              <li class="nav-item"><a  class="nav-link  border-light border rounded p-2 me-2 mb-2" style="width: 115px;"  routerLink="/users/{{userData}}/user-cart">Wishlist<i class="fa-regular fa-heart me-1" style="padding-left: 5px;"></i> <div style="font-size: 10px;" class="badge bg-danger ">{{badgecount}}</div></a></li>
+              <li class="nav-item"><a (click)="handleclick()"  class="nav-link  border-light fw-bolder border rounded p-2" style="width: 82px;" routerLink="">LOG OUT</a></li>
+
+          </ul>
+      </div>
+  </div>
+</nav>
+
+
+<!-- <section>
+    <app-user-display></app-user-display>
+</section> -->

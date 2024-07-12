@@ -1,0 +1,24 @@
+.masthead{
+    background-image: url('https://i.postimg.cc/SKV3zRHz/360-F-654244460-Ah-ZUl-JX9-Tw5a-QZyv-Uxcmh3-Jzjm8m-UPi8-1.png');
+    background-size: cover;
+    padding: 10px;
+}
+.alldetails{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+.grid{
+    display:flex;
+    flex-wrap: wrap;
+}
+.box{
+    box-shadow: 0px  0px 20px rgb(124, 164, 190);
+    border: none;
+    transition: all ease-in-out .4s;
+}
+.box:hover{
+    transform: scale(1.04) ;
+}

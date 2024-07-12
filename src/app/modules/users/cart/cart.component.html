@@ -1,0 +1,51 @@
+<!-- Navigation-->
+<app-user-home></app-user-home>
+
+
+<ng-container *ngIf="true">
+
+    
+<!-- card -->
+<div class="container" style="margin-top: 10%;">
+    <div  class="row">
+        <div *ngFor="let wishlists of allwishlist | wishlist:searchkey : 'email'" class="card mb-3 me-2" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img [src]="wishlists.photo"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">Name : {{wishlists.name}}</h5>
+                        <h5 class="card-title fw-bolder">Model Name :{{wishlists.model}}</h5>
+                        <p class="card-text fw-bolder">Color : {{wishlists.color}}</p>
+                        <p class="card-text fw-bolder">Price : {{wishlists.price}}<span class="text-secondary">/day</span></p>
+
+                        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                        <div class=" card-footer p-2  border-top-0 bg-transparent">
+
+                            <div class="text-center justify-content-end"><button (click)="canwish(wishlists._id)" class="btn btn-outline-danger mt-auto" routerLink="#"><i class="fa-solid fa-heart-circle-xmark"></i></button></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</ng-container>
+
+
+
+
+<ng-container *ngIf="false">
+    
+    <div class="container  text-center ">
+        <img class="w-25 " style="margin-top: 220px;"
+            src="https://www.our-eshop.com/frontend/assets/images/no-wish-list.png" alt="no image">
+        <h4 class="text-danger">Your Wishlist Is Empty</h4>
+    </div>
+</ng-container>
+

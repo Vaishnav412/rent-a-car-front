@@ -1,0 +1,70 @@
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-dark p-4  navbar-custom fixed-top" style="background: rgb(132,164,163);
+background: linear-gradient(109deg, rgba(132,164,163,1) 35%, rgba(32,166,213,1) 77%);">
+  <div class="container px-5">
+      <a class="navbar-brand text-light fw-bolder" href="#page-top">RENT A CAR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link text-light border rounded p-2 me-2" routerLink="/admin-add">Add car details</a></li>
+              <li class="nav-item"><a class="nav-link text-light border rounded p-2 me-2" routerLink="/admin">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-light border rounded p-2" routerLink="admin-bookings">Booking</a></li>
+
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<section id="booking">
+    
+    <!-- card -->
+    <div class="container">
+        <div class="row" >
+            <div *ngFor="let getalls of getAllBook" class="card mb-3" id="bookingcard" style="max-width: 100%;">
+                <div  class="row g-0">
+                    <div class="col-md-4">
+                        <img [src]="getalls.carimage"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+    
+                    <div class="col-md-4">
+                       <div class="card-body pt-5">
+                            <p class="card-title fw-bolder">Name :&nbsp; {{getalls.carname}} </p>
+                            <p class="card-title fw-bolder">Model Name : {{getalls.carmodel}}</p>
+                            <p class="card-title fw-bolder">Color :  {{getalls.color}}</p>
+                            <p class="card-title fw-bolder">Transmission : {{getalls.transmission}}</p>
+                            <p class="card-title fw-bolder">Price : {{getalls.price}}<span style="color: gray;">/Day</span></p>
+                       </div>
+                    </div>
+    
+                    
+    
+                    <div class="col-md-4">
+                        <div class="bookingsec card-body pt-5 rounded">
+                            <p class="card-title fw-bolder">Name : &nbsp;{{getalls.name}}</p>
+                            <p class="card-title fw-bolder">User Mail : &nbsp;{{getalls.usermail}}</p>
+    
+                            <p class="card-title fw-bolder">Age : &nbsp;{{getalls.age}}</p>
+                            <p class="card-title fw-bolder">Mobile : &nbsp;{{getalls.mobile}}</p>
+    
+                            <p class="card-title fw-bolder">ProofID : &nbsp;{{getalls.proofID}}</p>
+                            <div class="d-flex">
+                                <p class="card-text fw-bolder me-5">Starting Date : &nbsp; <br> {{getalls.startingDate}}</p>
+                                <p class="card-text fw-bolder">Ending Date : &nbsp; <br> {{getalls.endingDate}}</p>
+                            </div>
+    
+    
+                            <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                            <div class="d-flex card-footer p-2  border-top-0 bg-transparent justify-content-end">
+                                
+                                <!-- <div class="text-center "><button  class="btn btn-outline-danger mt-auto" routerLink="#">Cancel Booking</button></div> -->
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
